@@ -1,10 +1,10 @@
 const express = require("express");
+const route = require("./routes/route");
+
 const app = express();
 
 //route handler
-app.get("/", (req, res) => {
-  res.send({ Welcome: "to my app" });
-});
+app.use("/", route);
 
 //Dynamic Port binding
 const PORT = process.env.PORT || 2001;
